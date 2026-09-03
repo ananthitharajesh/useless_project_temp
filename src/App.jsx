@@ -110,26 +110,8 @@ function calculateToiletScore(toilet) {
 // --------------------------------------------------
 
 async function fetchNearbyToilets(lat, lng) {
-  const query = `
-    [out:json][timeout:20];
-
-    (
-      node["amenity"="toilets"](around:5000,${lat},${lng});
-      way["amenity"="toilets"](around:5000,${lat},${lng});
-      relation["amenity"="toilets"](around:5000,${lat},${lng});
-    );
-
-    out center tags;
-  `;
-
   const response = await fetch(
-    "https://overpass-api.de/api/interpreter",
-    {
-      method: "POST",
-      body: new URLSearchParams({
-        data: query,
-      }),
-    }
+    `/api/toilets?lat=${lat}&lng=${lng}`
   );
 
   if (!response.ok) {
@@ -150,7 +132,6 @@ async function fetchNearbyToilets(lat, lng) {
 
       return {
         id: `${toilet.type}-${toilet.id}`,
-
         name:
           tags.name ||
           tags["name:en"] ||
@@ -162,8 +143,10 @@ async function fetchNearbyToilets(lat, lng) {
         access: tags.access || "Unknown",
         fee: tags.fee || "Unknown",
         wheelchair: tags.wheelchair || "Unknown",
+
         openingHours:
           tags.opening_hours || "Unknown",
+
         water: tags.water || "Unknown",
         soap: tags.soap || "Unknown",
 
