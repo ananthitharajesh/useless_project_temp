@@ -44,11 +44,12 @@ export default async function handler(req, res) {
 
     return res.status(200).json(data);
   } catch (error) {
-    console.error("Toilet API error:", error);
+  console.error("Toilet API error:", error);
 
-    return res.status(500).json({
-      error: "Could not fetch toilet data",
-      details: error instanceof Error ? error.message : String(error),
-    });
-  }
+  return res.status(500).json({
+    error: "Could not fetch toilet data",
+    details: String(error),
+    stack: error?.stack || null,
+  });
+
 }
