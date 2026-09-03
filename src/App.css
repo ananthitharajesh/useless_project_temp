@@ -243,7 +243,13 @@ button {
 
   background: #fff;
 
+  color: #111;
+
   font-weight: 700;
+}
+
+.manual-location input::placeholder {
+  color: #666;
 }
 
 .manual-location input:focus {
