@@ -21,15 +21,13 @@ export default async function handler(req, res) {
       out center tags;
     `;
 
-    const url =
-      "https://overpass-api.de/api/interpreter?data=" +
-      encodeURIComponent(query);
-
-    const response = await fetch(url, {
-      method: "GET",
+    const response = await fetch("https://overpass-api.de/api/interpreter", {
+      method: "POST",
       headers: {
-        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "YourAppName/1.0 (contact@yourdomain.com)",
       },
+      body: "data=" + encodeURIComponent(query),
     });
 
     const text = await response.text();
@@ -45,7 +43,6 @@ export default async function handler(req, res) {
     const data = JSON.parse(text);
 
     return res.status(200).json(data);
-
   } catch (error) {
     console.error("Toilet API error:", error);
 
