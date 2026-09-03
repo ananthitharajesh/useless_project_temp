@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      #fff16b 0,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      #ff8fd8 0,
+      transparent 25%
+    ),
+    #f7f4ed;
+
+  color: #111;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* -------------------------------- */
+/* NAVBAR */
+/* -------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 5%;
+
+  border-bottom: 3px solid #111;
+
+  background: #fff;
+}
+
+.logo {
+  font-family: "Space Grotesk";
+
+  font-weight: 900;
+
+  font-size: 1.1rem;
+}
+
+.nav-tag {
+  background: #111;
+
+  color: #fff;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+}
+
+/* -------------------------------- */
+/* HERO */
+/* -------------------------------- */
+
+.hero {
+  min-height: 620px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 80px 8%;
+
+  border-bottom: 3px solid #111;
+}
+
+.hero-small {
+  display: inline-block;
+
+  width: fit-content;
+
+  background: #ff70c8;
+
+  padding: 8px 14px;
+
+  border: 3px solid #111;
+
+  box-shadow: 5px 5px 0 #111;
+
+  transform: rotate(-2deg);
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  font-family: "Space Grotesk";
+
+  font-size: clamp(4rem, 10vw, 9rem);
+
+  line-height: 0.82;
+
+  margin: 30px 0;
+
+  letter-spacing: -0.07em;
+}
+
+.hero h1 span {
+  background: #eaff4f;
+
+  padding: 0 15px;
+
+  box-shadow: 8px 8px 0 #111;
+}
+
+.hero-description {
+  font-size: 1.4rem;
+
+  font-weight: 700;
+
+  margin-bottom: 35px;
+}
+
+/* -------------------------------- */
+/* LOCATION CONTROLS */
+/* -------------------------------- */
+
+.location-controls {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+.find-button {
+  width: fit-content;
+
+  background: #111;
+
+  color: white;
+
+  border: 3px solid #111;
+
+  padding: 18px 28px;
+
+  font-size: 1rem;
+
+  font-weight: 900;
+
+  box-shadow: 7px 7px 0 #ff70c8;
+
+  transition: 0.15s;
+}
+
+.find-button:hover {
+  transform: translate(4px, 4px);
+
+  box-shadow: 3px 3px 0 #ff70c8;
+}
+
+.find-button:disabled {
+  opacity: 0.6;
+
+  cursor: wait;
+}
+
+.or-text {
+  font-size: 0.8rem;
+
+  font-weight: 900;
+}
+
+.manual-location {
+  display: flex;
+}
+
+.manual-location input {
+  width: 260px;
+
+  padding: 16px;
+
+  border: 3px solid #111;
+
+  border-right: 0;
+
+  outline: none;
+
+  background: #fff;
+
+  font-weight: 700;
+}
+
+.manual-location input:focus {
+  background: #eaff4f;
+}
+
+.manual-location button {
+  padding: 16px 20px;
+
+  border: 3px solid #111;
+
+  background: #ff70c8;
+
+  font-weight: 900;
+}
+
+.manual-location button:hover {
+  background: #eaff4f;
+}
+
+.location-status {
+  margin-top: 20px;
+
+  font-weight: 900;
+
+  max-width: 900px;
+}
+
+/* -------------------------------- */
+/* ERROR */
+/* -------------------------------- */
+
+.error-box {
+  margin: 30px 8%;
+
+  padding: 18px;
+
+  border: 3px solid #111;
+
+  background: #ff70c8;
+
+  font-weight: 900;
+
+  box-shadow: 6px 6px 0 #111;
+}
+
+/* -------------------------------- */
+/* SECTIONS */
+/* -------------------------------- */
+
+.map-section,
+.results-section {
+  padding: 80px 8%;
+}
+
+.section-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+}
+
+.section-heading h2 {
+  font-family: "Space Grotesk";
+
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+
+  line-height: 0.9;
+
+  margin: 0;
+
+  letter-spacing: -0.05em;
+}
+
+.toilet-count {
+  background: #eaff4f;
+
+  border: 3px solid #111;
+
+  padding: 10px 16px;
+
+  font-weight: 900;
+
+  box-shadow: 5px 5px 0 #111;
+}
+
+/* -------------------------------- */
+/* MAP */
+/* -------------------------------- */
+
+.map-wrapper {
+  height: 520px;
+
+  border: 4px solid #111;
+
+  box-shadow: 10px 10px 0 #111;
+
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+
+  height: 100%;
+}
+
+.leaflet-popup-content-wrapper {
+  border: 3px solid #111;
+
+  border-radius: 0;
+}
+
+.leaflet-popup-content {
+  font-family: "DM Sans";
+
+  font-weight: 700;
+}
+
+.leaflet-popup-content button {
+  margin-top: 10px;
+
+  padding: 8px 12px;
+
+  border: 0;
+
+  background: #111;
+
+  color: white;
+
+  font-weight: 900;
+}
+
+/* -------------------------------- */
+/* FILTERS */
+/* -------------------------------- */
+
+.filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 35px;
+}
+
+.filter {
+  background: #fff;
+
+  border: 3px solid #111;
+
+  padding: 10px 18px;
+
+  font-weight: 900;
+
+  box-shadow: 4px 4px 0 #111;
+}
+
+.filter.active {
+  background: #eaff4f;
+}
+
+.filter:hover {
+  transform: translate(2px, 2px);
+
+  box-shadow: 2px 2px 0 #111;
+}
+
+/* -------------------------------- */
+/* TOILET GRID */
+/* -------------------------------- */
+
+.toilet-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    );
+
+  gap: 28px;
+}
+
+.toilet-card {
+  background: #fff;
+
+  border: 3px solid #111;
+
+  padding: 25px;
+
+  box-shadow: 8px 8px 0 #111;
+
+  transition: 0.15s;
+}
+
+.toilet-card:hover {
+  transform: translate(-3px, -3px);
+
+  box-shadow: 12px 12px 0 #111;
+}
+
+.card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.status {
+  background: #eaff4f;
+
+  border: 2px solid #111;
+
+  padding: 5px 8px;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+}
+
+.distance {
+  font-weight: 900;
+}
+
+.toilet-card h3 {
+  font-family: "Space Grotesk";
+
+  font-size: 1.7rem;
+
+  margin: 0 0 10px;
+}
+
+.vibe {
+  font-weight: 700;
+
+  min-height: 48px;
+}
+
+/* -------------------------------- */
+/* DETAILS */
+/* -------------------------------- */
+
+.details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin: 25px 0;
+}
+
+.details div {
+  border: 2px solid #111;
+
+  padding: 10px;
+
+  background: #f7f4ed;
+}
+
+.details span {
+  display: block;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+.details strong {
+  font-size: 0.75rem;
+
+  word-break: break-word;
+}
+
+/* -------------------------------- */
+/* TOILET ORACLE */
+/* -------------------------------- */
+
+.ai-verdict {
+  background: #ff70c8;
+
+  border: 3px solid #111;
+
+  padding: 15px;
+
+  margin-bottom: 18px;
+}
+
+.score-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.score-header span {
+  font-size: 0.7rem;
+
+  font-weight: 900;
+}
+
+.score-header strong {
+  font-family: "Space Grotesk";
+
+  font-size: 1.4rem;
+}
+
+.ai-verdict p {
+  margin: 8px 0 0;
+
+  font-weight: 900;
+}
+
+/* -------------------------------- */
+/* DIRECTIONS */
+/* -------------------------------- */
+
+.directions {
+  width: 100%;
+
+  background: #111;
+
+  color: white;
+
+  border: 3px solid #111;
+
+  padding: 15px;
+
+  font-weight: 900;
+
+  transition: 0.15s;
+}
+
+.directions:hover {
+  background: #eaff4f;
+
+  color: #111;
+}
+
+/* -------------------------------- */
+/* LOADING / EMPTY */
+/* -------------------------------- */
+
+.loading-box,
+.empty-box {
+  border: 3px solid #111;
+
+  background: #fff;
+
+  padding: 30px;
+
+  font-weight: 900;
+
+  text-align: center;
+
+  box-shadow: 6px 6px 0 #111;
+}
+
+.empty-box span {
+  font-size: 0.9rem;
+}
+
+/* -------------------------------- */
+/* WAITING */
+/* -------------------------------- */
+
+.waiting-section {
+  text-align: center;
+
+  padding: 100px 20px;
+}
+
+.giant-emoji {
+  font-size: 7rem;
+
+  margin-bottom: 20px;
+}
+
+.waiting-section h2 {
+  font-family: "Space Grotesk";
+
+  font-size: clamp(2rem, 6vw, 5rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.05em;
+}
+
+.waiting-section p {
+  font-size: 1.2rem;
+
+  font-weight: 700;
+}
+
+/* -------------------------------- */
+/* FOOTER */
+/* -------------------------------- */
+
+footer {
+  border-top: 3px solid #111;
+
+  padding: 25px 8%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+}
+
+/* -------------------------------- */
+/* MOBILE */
+/* -------------------------------- */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: flex-start;
+  }
+
+  .hero {
+    min-height: 550px;
+
+    padding: 60px 6%;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .location-controls {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .manual-location {
+    width: 100%;
+  }
+
+  .manual-location input {
+    width: 100%;
+  }
+
+  .map-section,
+  .results-section {
+    padding: 60px 6%;
+  }
+
+  .map-wrapper {
+    height: 400px;
+  }
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
