@@ -93,6 +93,10 @@ button {
   padding: 80px 8%;
 
   border-bottom: 3px solid #111;
+
+  /* subtle dot texture so the big flat gradient isn't empty behind the type */
+  background-image: radial-gradient(#11111114 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
 }
 
 .hero-small {
@@ -120,6 +124,14 @@ button {
 .hero h1 {
   font-family: "Space Grotesk";
 
+  /* THIS is the fix: force a solid, opaque, high-contrast color on every
+     line of the headline. Previously this had no explicit color, so any
+     inherited/lower-opacity value made "YOUR BLADDER" nearly vanish
+     against the light gradient. */
+  color: #111;
+  -webkit-text-fill-color: #111;
+  opacity: 1;
+
   font-size: clamp(4rem, 10vw, 9rem);
 
   line-height: 0.82;
@@ -127,14 +139,30 @@ button {
   margin: 30px 0;
 
   letter-spacing: -0.07em;
+
+  /* a hairline stroke so even the plain (non-highlighted) line reads
+     as "designed" rather than default black type */
+  text-shadow: 3px 3px 0 #fff8;
 }
 
 .hero h1 span {
+  display: inline-block;
+
   background: #eaff4f;
 
-  padding: 0 15px;
+  color: #111;
+
+  padding: 4px 15px 8px;
+
+  margin-top: 12px;
+
+  border: 3px solid #111;
 
   box-shadow: 8px 8px 0 #111;
+
+  text-shadow: none;
+
+  transform: rotate(-1deg);
 }
 
 .hero-description {
@@ -143,6 +171,7 @@ button {
   font-weight: 700;
 
   margin-bottom: 35px;
+  margin-top: 10px;
 }
 
 /* -------------------------------- */
@@ -229,6 +258,8 @@ button {
   background: #ff70c8;
 
   font-weight: 900;
+
+  transition: 0.15s;
 }
 
 .manual-location button:hover {
@@ -302,6 +333,8 @@ button {
   margin: 0;
 
   letter-spacing: -0.05em;
+
+  color: #111;
 }
 
 .toilet-count {
@@ -386,6 +419,8 @@ button {
   font-weight: 900;
 
   box-shadow: 4px 4px 0 #111;
+
+  transition: 0.15s;
 }
 
 .filter.active {
@@ -464,6 +499,8 @@ button {
   font-size: 1.7rem;
 
   margin: 0 0 10px;
+
+  color: #111;
 }
 
 .vibe {
@@ -523,6 +560,8 @@ button {
   padding: 15px;
 
   margin-bottom: 18px;
+
+  box-shadow: 4px 4px 0 #111;
 }
 
 .score-header {
@@ -624,6 +663,8 @@ button {
   line-height: 0.9;
 
   letter-spacing: -0.05em;
+
+  color: #111;
 }
 
 .waiting-section p {
