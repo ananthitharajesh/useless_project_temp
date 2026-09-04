@@ -1,71 +1,185 @@
-<img width="1280" height="640" alt="image" src="https://github.com/user-attachments/assets/db6155aa-5167-4b98-a2bf-3bbdb825ea65" />
-Project Name] 🎯
-Basic Details
-Team Name: [Name]
-Team Members
-Team Lead: [Name] - [College]
-Member 2: [Name] - [College]
-Member 3: [Name] - [College]
-Project Description
-[2-3 lines about what your project does]
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
 
-The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
 
-Technical Details
-Technologies/Components Used
+# Where Tf is the Toilet? 🎯
+
+
+## Basic Details
+### Team Name: Code35
+
+
+### Team Members
+- Team Lead: Aadya B Nair - Lbsitw
+- Member 2: Ananthita Rajesh - Lbsitw
+  
+
+### Project Description
+Toilet Finder is a completely unnecessary yet strangely useful website that helps people locate nearby public toilets, check their general condition, and report issues.
+
+Because apparently finding a toilet needed an entire web application.
+
+
+### The Problem (that doesn't exist)
+Have you ever desperately needed a toilet and thought:
+
+"Wow, I wish there was a website for this"
+
+No?
+
+Neither did we.
+
+But we decided to solve this extremely important non-problem anyway.
+
+The real crisis: having to walk around asking random people where the nearest toilet is while Google Maps watches silently.dicated website for this."
+
+No?
+
+Neither did we.
+
+But we decided to solve this extremely important non-problem anyway.
+
+The real crisis: having to walk around asking random people where the nearest toilet is while Google Maps watches silently.
+
+### The Solution (that nobody asked for)
+We built Toilet Finder — a website that lets users find nearby public toilets, view them on a map, check their status, and report problems.
+
+Users can:
+
+- 📍 Find toilets around their location
+- 🗺️ View toilets on a map
+- 📏 Check approximate distance
+- 🟢🟡🔴 Check toilet condition
+- 🤖 Receive a completely unnecessary "AI-style" toilet verdict
+- 📢 Report issues
+
+Is it necessary?
+
+Absolutely not.
+
+Did we build it anyway?
+Absolutely
+
+## Technical Details
+### Technologies/Components Used
+For Software:
+- JavaScript
+- HTML
+- CSS
+- React
+- Vite
+- Git & GitHub
+- VS Code
+For Hardware:
+None
+
+### Implementation
+For Software:
+# Installation
+Clone the repository and install the dependencies 
+
+git clone [YOUR-GITHUB-REPOSITORY-LINK]
+cd [PROJECT-FOLDER]
+npm install
+
+# Run
+npm run dev
+
+### Project Documentation
 For Software:
 
-[Languages used]
-[Frameworks used]
-[Libraries used]
-[Tools used]
+
+# Screenshots (Add at least 3)
+# Screenshots
+
+![Homepage](screenshots/homepage.png)
+
+*The homepage of Toilet Finder.*
+
+![Map](screenshots/Maps.png)
+
+*The map showing nearby toilet locations.*
+
+![Toilet Cards](screenshots/toiletcard.png)
+
+*Toilet cards showing distance, condition, and toilet status.*
+
+# Diagrams
+                ┌─────────────────┐
+                │   USER OPENS    │
+                │  TOILET FINDER  │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │  FIND LOCATION  │
+                │       📍        │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ VIEW NEARBY     │
+                │    TOILETS 🗺️   │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ CHECK DISTANCE  │
+                │ & CONDITION 🚽  │
+                └────────┬────────┘
+                         │
+                    ┌────┴────┐
+                    ▼         ▼
+              ┌──────────┐ ┌─────────────┐
+              │  SELECT  │ │ REPORT AN   │
+              │  TOILET  │ │    ISSUE 📢 │
+              └────┬─────┘ └──────┬──────┘
+                   │              │
+                   └──────┬───────┘
+                          ▼
+                  ┌───────────────┐
+                  │  USER FINDS   │
+                  │  / REPORTS    │
+                  │   TOILET 🚽   │
+                  └───────────────┘
+
 For Hardware:
 
-[List main components]
-[List specifications]
-[List tools required]
-Implementation
-For Software:
+# Schematic & Circuit
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
 
-Installation
-[commands]
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
 
-Run
-[commands]
+# Build Photos
+![Components](Add photo of your components here)
+*List out all components shown*
 
-Project Documentation
-For Software:
+![Build](Add photos of build process here)
+*Explain the build steps*
 
-Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name) Add caption explaining what this shows
+![Final](Add photo of final product here)
+*Explain the final build*
 
-![Screenshot2](Add screenshot 2 here with proper name) Add caption explaining what this shows
+### Project Demo
+# Video
+[Add your demo video link here]
+*Explain what the video demonstrates*
 
-![Screenshot3](Add screenshot 3 here with proper name) Add caption explaining what this shows
+# Additional Demos
+[Add any extra demo materials/links]
 
-Diagrams
-![Workflow](Add your workflow/architecture diagram here) Add caption explaining your workflow
+## Team Contributions
+- [Name 1]: [Specific contributions]
+- [Name 2]: [Specific contributions]
+- [Name 3]: [Specific contributions]
 
-For Hardware:
+---
+Made with ❤️ at TinkerHub Useless Projects 
 
-Schematic & Circuit
-![Circuit](Add your circuit diagram here) Add caption explaining connections
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
 
-![Schematic](Add your schematic diagram here) Add caption explaining the schematic
 
-Build Photos
-![Components](Add photo of your components here) List out all components shown
 
-![Build](Add photos of build process here) Explain the build steps
-
-![Final](Add photo of final product here) Explain the final build
-
-Project Demo
-Video
-[Add your demo video link here] Explain what the video demonstrates
-
-Additional Demos
