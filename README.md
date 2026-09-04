@@ -92,7 +92,7 @@ For Software:
 # Screenshots (Add at least 3)
 # Screenshots
 
-![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/homapage.png)
 
 *The homepage of Toilet Finder.*
 
@@ -100,7 +100,7 @@ For Software:
 
 *The map showing nearby toilet locations.*
 
-![Toilet Cards](screenshots/toiletcard.png)
+![Toilet Cards](screenshots/Toiletcard.png)
 
 *Toilet cards showing distance, condition, and toilet status.*
 
