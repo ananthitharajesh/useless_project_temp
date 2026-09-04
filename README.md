@@ -30,15 +30,6 @@ No?
 Neither did we.
 
 But we decided to solve this extremely important non-problem anyway.
-
-"The real crisis: having to walk around asking random people where the nearest toilet is while Google Maps watches silently.dicated website for this."
-
-No?
-
-Neither did we.
-
-But we decided to solve this extremely important non-problem anyway.
-
 The real crisis: having to walk around asking random people where the nearest toilet is while Google Maps watches silently.
 
 ### The Solution (that nobody asked for)
